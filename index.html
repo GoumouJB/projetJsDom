@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Menu latéral -->
+        <nav class="sidebar">
+            <h2>JS HTML DOM</h2>
+            <ul>
+                <li><a href="#" onclick="afficherSection('domMethods')">Méthodes DOM</a></li>
+                <li><a href="#" onclick="afficherSection('domDocument')">Objet Document</a></li>
+                <li><a href="#" onclick="afficherSection('domElements')">Manipulation d'Éléments</a></li>
+                <li><a href="#" onclick="afficherSection('domHTML')">Propriétés HTML</a></li>
+                <li><a href="#" onclick="afficherSection('domForms')">Validation de Formulaire</a></li>
+                <li><a href="#" onclick="afficherSection('domCSS')">Manipulation CSS</a></li>
+                <li><a href="#" onclick="afficherSection('domAnimations')">Animations DOM</a></li>
+                <li><a href="#" onclick="afficherSection('domEvents')">Événements DOM</a></li>
+                <li><a href="#" onclick="afficherSection('domEventListener')">Écouteur d'Événements</a></li>
+                <li><a href="#" onclick="afficherSection('domNodes')">Nœuds DOM</a></li>
+                <li><a href="#" onclick="afficherSection('domCollections')">Collections DOM</a></li>
+                <li><a href="#" onclick="afficherSection('domNodeList')">Node List</a></li>
+            </ul>
+        </nav>
+
+        <!-- Contenu principal -->
+        <div class="content">
+            <!-- Section Méthodes DOM -->
+            <section id="domMethods" class="demo-section">
+                <h1>Démonstration des Méthodes DOM</h1>
+                <p id="demo-paragraph">Cliquez ci-dessous pour changer ce texte.</p>
+                <button onclick="changerTexteDemo()">Changer le texte</button>
+                <ul id="maListe">
+                    <li>Premier élément</li>
+                    <li>Deuxième élément</li>
+                </ul>
+                <button onclick="ajouterElementListe()">Ajouter un élément à la liste</button>
+            </section>
+
+            <!-- Section Objet Document -->
+            <section id="domDocument" class="demo-section">
+                <h1>Démonstration de l'Objet Document</h1>
+                <p>Affichez des informations sur le document ci-dessous :</p>
+                <button onclick="afficherInfosDocument()">Afficher les infos du document</button>
+                <div id="document-info"></div>
+            </section>
+
+            <!-- Section Manipulation d'Éléments -->
+            <section id="domElements" class="demo-section">
+                <h1>Démonstration de la Manipulation des Éléments</h1>
+                <input type="text" id="texteElement" placeholder="Entrez un nouveau texte">
+                <button onclick="modifierParagraphe()">Modifier le paragraphe</button>
+                <p id="paragraphe-element">Ceci est le paragraphe par défaut.</p>
+                <button onclick="changerCouleur()">Changer la couleur</button>
+                <button onclick="cacherElement()">Cacher l'élément</button>
+                <button onclick="afficherElement()">Afficher l'élément</button>
+            </section>
+
+            <!-- Section Propriétés HTML -->
+            <section id="domHTML" class="demo-section">
+                <h1>Démonstration des Propriétés HTML</h1>
+                <img id="image-demo" src="image_actuelle.jpg" alt="Image actuelle" width="300" height="200">
+                <button onclick="changerImage()">Changer l'image</button>
+            </section>
+
+            <!-- Section Validation de Formulaire -->
+            <section id="domForms" class="demo-section">
+                <h1>Démonstration de la Validation de Formulaire</h1>
+                <form onsubmit="return validerFormulaire()">
+                    <label for="nomFormulaire">Nom :</label>
+                    <input type="text" id="nomFormulaire" name="nomFormulaire" placeholder="Entrez votre nom">
+                    <button type="submit">Soumettre</button>
+                </form>
+            </section>
+
+            <!-- Section Manipulation CSS -->
+            <section id="domCSS" class="demo-section">
+                <h1>Démonstration de la Manipulation CSS</h1>
+                <p id="paragraphe-css">Spécialiste des systèmes d'informations.</p>
+                <button onclick="appliquerClasseCSS()">Appliquer un style spécial</button>
+            </section>
+
+            <!-- Section Animations DOM -->
+            <section id="domAnimations" class="demo-section">
+                <h1>Démonstration des Animations DOM</h1>
+                <div id="element-animation" style="position: relative; width: 50px; height: 50px; background-color: red;"></div>
+                <button onclick="demarrerAnimation()">Démarrer l'animation</button>
+            </section>
+
+            <!-- Section Événements DOM -->
+            <section id="domEvents" class="demo-section">
+                <h1>Démonstration des Événements DOM</h1>
+                <button onclick="gererClic()">Cliquez ici</button>
+            </section>
+
+            <!-- Section Écouteur d'Événements -->
+            <section id="domEventListener" class="demo-section">
+                <h1>Démonstration des Écouteurs d'Événements</h1>
+                <button id="bouton-event">Ajoutez un écouteur à ce bouton</button>
+                <button onclick="ajouterEcouteur()">Ajouter l'écouteur</button>
+            </section>
+
+            <!-- Section Nœuds DOM -->
+            <section id="domNodes" class="demo-section">
+                <h1>Démonstration des Nœuds DOM</h1>
+                <ul id="liste-noeuds">
+                    <li>Premier nœud</li>
+                    <li>Deuxième nœud</li>
+                </ul>
+                <button onclick="ajouterNoeud()">Ajouter un nœud</button>
+            </section>
+
+            <!-- Section Collections DOM -->
+            <section id="domCollections" class="demo-section">
+                <h1>Démonstration des Collections DOM</h1>
+                <ul>
+                    <li class="collection-item">Premier élément de collection</li>
+                    <li class="collection-item">Deuxième élément de collection</li>
+                </ul>
+                <button onclick="changerStyleCollection()">Changer le style de la collection</button>
+            </section>
+
+            <!-- Section Node List -->
+            <section id="domNodeList" class="demo-section">
+                <h1>Démonstration de la Node List</h1>
+                <ul>
+                    <li class="nodelist-item">Premier élément NodeList</li>
+                    <li class="nodelist-item">Deuxième élément NodeList</li>
+                </ul>
+                <button onclick="afficherNodeList()">Afficher le contenu de la NodeList</button>
+            </section>
+        </div>
+    </div>
+    
+    <script src="JS/script.js"></script>
+ 
+</body>
+</html>

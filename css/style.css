@@ -1,0 +1,145 @@
+/* Styles globaux */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+}
+
+.wrapper {
+    display: flex;
+    width: 100%;
+}
+
+/* Style de la barre de menu latérale */
+.sidebar {
+    width: 250px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    height: 100vh;
+    position: fixed;
+}
+
+.sidebar h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+    padding: 8px 12px;
+    display: block;
+}
+
+.sidebar ul li a:hover {
+    background-color: #007BFF;
+    color: white;
+    border-radius: 4px;
+}
+
+/* Style du contenu principal */
+.content {
+    margin-left: 270px; /* Espace entre la barre latérale et le contenu */
+    padding: 20px;
+    width: calc(100% - 270px); /* Ajuster la largeur du contenu */
+}
+
+/* Style des sections */
+.demo-section {
+    display: none;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.demo-section.active {
+    display: block;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+p, label {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+input[type="text"] {
+    padding: 8px;
+    width: 80%;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input, form button {
+    width: 50%;
+}
+/* Style de l'image dans la section HTML */
+#image-demo {
+    display: block;
+    margin: 20px auto;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+}
+/* Style initial du paragraphe */
+#paragraphe-css {
+    font-style: normal;
+    font-weight: normal;
+    color: black;
+    opacity: 1; /* Opacité complète */
+    transition: all 0.3s ease; /* Pour une transition douce lors des changements de style */
+}
+/* Styles pour les éléments de collection et NodeList */
+.collection-item, .nodelist-item {
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+/* Styles pour l'animation */
+#element-animation {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+}
+
